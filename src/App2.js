@@ -3,13 +3,13 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {withCounterContext} from './context'
 
-class App extends Component {
+class App2 extends Component {
 
     render() {
         return (
             <div className="container-fluid h-100vh d-flex justify-content-center align-items-center">
                 <div style={{width: "250px"}}>
-                    <h2 className="text-center mb-4">App</h2>
+                    <h2 className="text-center mb-4">App2</h2>
                     <div className="card border-dark w-100">
                         <div className="card-body">
                             <h3 className="text-center mb-4">Counter</h3>
@@ -35,4 +35,4 @@ class App extends Component {
     }
 }
 
-export default withCounterContext(App);
+export default withCounterContext(App2);

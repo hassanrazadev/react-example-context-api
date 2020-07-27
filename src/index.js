@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import App2 from './App2';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import {Route, BrowserRouter as Router} from 'react-router-dom';
+import {ContextProvider} from "./context";
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContextProvider>
+        <Router>
+            <Route path="/" exact component={App}/>
+            <Route path="/app2" component={App2}/>
+        </Router>
+    </ContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
