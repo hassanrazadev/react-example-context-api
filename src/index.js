@@ -6,13 +6,14 @@ import * as serviceWorker from './serviceWorker';
 
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 import {ContextProvider} from "./context";
-
+import Navigation from "./Navigation";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContextProvider>
-        <Router>
-            <Route path="/" exact component={App}/>
+      <ContextProvider>
+          <Router>
+              <Navigation/>
+              <Route path="/" exact component={App}/>
             <Route path="/app2" component={App2}/>
         </Router>
     </ContextProvider>
